@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function ProductosPage() {
   return (
     <main className="page-container">
@@ -13,7 +11,7 @@ export default function ProductosPage() {
           <div key={product.id} className="product-card">
             <div className="product-image">
               <img 
-                src={product.image} 
+                src={product.image}
                 alt={product.name}
                 className="product-img"
               />

@@ -12,7 +12,7 @@ import {
   Legend,
   ArcElement,
 } from 'chart.js'
-import { Line, Bar, Doughnut } from 'react-chartjs-2'
+import { Line, Doughnut } from 'react-chartjs-2'
 
 ChartJS.register(
   CategoryScale,
@@ -377,7 +377,11 @@ export default function DashboardPage() {
               {topProducts.map((product, index) => (
                 <div key={index} className="product-card">
                   <div className="product-image">
-                    <img src={`https://i.imgur.com/${index === 0 ? 'im9k8fm' : index === 1 ? 'ZTYh8Pd' : 'AjkdGus'}.jpg`} alt={product.name} />
+                    <img
+                      src={`https://i.imgur.com/${index === 0 ? 'im9k8fm' : index === 1 ? 'ZTYh8Pd' : 'AjkdGus'}.jpg`}
+                      alt={product.name}
+                      className="product-img"
+                    />
                   </div>
                   <div className="product-info">
                     <h3>{product.name}</h3>

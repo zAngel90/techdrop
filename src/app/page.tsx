@@ -1,4 +1,3 @@
-import Image from "next/image";
 import "./globals.css";
 import Link from 'next/link'
 
@@ -29,7 +28,7 @@ export default function Home() {
         <div className="hero-image">
           <div className="hero-image-wrapper">
             <img 
-              src="https://i.imgur.com/ZTYh8Pd.jpg" 
+              src="https://i.imgur.com/ZTYh8Pd.jpg"
               alt="Audífonos Premium"
               className="product-hero-image"
             />

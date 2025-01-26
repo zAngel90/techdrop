@@ -1,7 +1,16 @@
 'use client'
 import { useReactTable, createColumnHelper, getCoreRowModel, flexRender } from '@tanstack/react-table'
 
-const columnHelper = createColumnHelper<any>()
+interface ProductData {
+  producto: string;
+  imagen: string;
+  ventas: string;
+  ingresos: string;
+  crecimiento: number;
+  conversion: number;
+}
+
+const columnHelper = createColumnHelper<ProductData>()
 
 const columns = [
   columnHelper.accessor('producto', {
@@ -35,7 +44,7 @@ const columns = [
   }),
 ]
 
-const data = [
+const data: ProductData[] = [
   {
     producto: 'SmartWatch Pro X',
     imagen: 'https://i.imgur.com/im9k8fm.jpg',
@@ -59,14 +68,6 @@ const data = [
     ingresos: '294,590',
     crecimiento: -12,
     conversion: 1.9,
-  },
-  {
-    producto: 'Cámara Pro 360',
-    imagen: 'https://i.imgur.com/ZTYh8Pd.jpg',
-    ventas: '1,544',
-    ingresos: '185,280',
-    crecimiento: 28,
-    conversion: 2.5,
   },
 ]
 
